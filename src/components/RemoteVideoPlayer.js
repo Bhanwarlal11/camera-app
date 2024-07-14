@@ -15,7 +15,7 @@ import {
 function RemoteVideoPlayer({ videoDetail }) {
   return (
     <div className="w-fit lg:8/12 rounded-lg overflow-hidden ">
-      <div className="flex justify-between items-center mx-10 my-3">
+      <div className="flex flex-row justify-between items-center mx-10 my-3">
         <button>
           <ChevronLeft />
         </button>
@@ -32,7 +32,7 @@ function RemoteVideoPlayer({ videoDetail }) {
       <div>
         <ReactPlayer
           url={videoDetail?.url}
-          controls
+          
           width="100%"
           height="100%"
           playing={true}

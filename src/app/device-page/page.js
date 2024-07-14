@@ -5,6 +5,8 @@ import { sampleVideoUrls } from "@/utils/sampleVideoUrl";
 import { useRouter } from "next/navigation";
 import { SlOptionsVertical } from "react-icons/sl";
 import ReactPlayer from "react-player";
+import useWindowSize from "../hooks/useWindowSize";
+import Header from "@/components/Header";
 
 export default function DevicePage() {
   const router = useRouter();
@@ -13,9 +15,18 @@ export default function DevicePage() {
     router.push(`/device-page/${getClickedVideoID}`);
   }
 
+  const { width } = useWindowSize();
+
   return (
     <div>
-      <div className="mt-4 grid lg:grid-cols-4  place-items-center gap-5  md:grid-cols-2 sm:grid-cols-1  mb-16">
+     {
+          width < 993 ? (
+            <Header />
+          ) : (
+            null
+          )
+        }
+      <div className="mt-4 grid lg:grid-cols-4  place-items-center gap-5  md:grid-cols-2 sm:grid-cols-1  mx-3 md:mx-0  mb-1">
         {sampleVideoUrls.map((item) => (
           <div
             key={item?.id}

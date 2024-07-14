@@ -11,7 +11,7 @@ const RemoteButton = () => {
 
   return (
     
-      <div className="relative w-52 h-52 bg-gray-200 rounded-full flex justify-center items-center">
+      <div className="relative w-52 h-52 bg-gray-200 rounded-full flex justify-center items-center drop-shadow-lg hover:drop-shadow-xl">
         
         {/* Top button */}
         <button
