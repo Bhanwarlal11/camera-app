@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build": "next build",
+    "export": "next export",
+    "deploy": "npm run export && gh-pages -d out"
   },
   "dependencies": {
     "@coreui/coreui": "^5.0.2",
