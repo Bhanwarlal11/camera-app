@@ -59,31 +59,14 @@
 
 // export default DeviceID;
 
-
-
-
-'use client'
+"use client";
 
 import HlsPlayer from "@/components/hls-player-component";
-import LiveView from "@/components/LiveView";
-import Playback from "@/components/Playback";
-import { Button } from "@/components/ui/button";
-import { ChevronLeft, CircleHelp, History, Radio, Settings } from "lucide-react";
-import { useState } from "react";
 
-const DeviceID = ({ params }) => {
-  const { deviceID } = params;
-
-  
-  const [isPlayBack, setIsPlayBack] = useState(false);
-
-  function handleIsPlayBack() {
-    setIsPlayBack(!isPlayBack);
-  }
+const DeviceID = () => {
   return (
     <div className=" min-w-full min-h-screen flex flex-col md:flex-row gap-3  md:items-center ">
       <div className=" w-fit md:w-2/3 flex flex-col md:flex-row min-h-screen min-w-full">
-     
         <HlsPlayer
           // srcHd="https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"
           // srcSd="https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"
@@ -94,27 +77,7 @@ const DeviceID = ({ params }) => {
         />
       </div>
 
-      {/* <span className="fixed bottom-28 right-0 z-10 drop-shadow-md">
-        {isPlayBack ? (
-          <Button
-            onClick={handleIsPlayBack}
-            className="bg-gray-100 text-gray-500 hover:text-white flex flex-row gap-2 rounded-none rounded-l-3xl "
-          >
-            <Radio />
-            <span>LiveView</span>
-          </Button>
-        ) : (
-          <Button
-            onClick={handleIsPlayBack}
-            className="bg-gray-100 text-gray-500 hover:text-white flex flex-row gap-2 rounded-none rounded-l-3xl"
-          >
-            <History />
-            <span>Playback</span>
-          </Button>
-        )}
-      </span>
-
-      {isPlayBack ? <Playback /> : <LiveView />} */}
+      
     </div>
   );
 };
