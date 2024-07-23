@@ -22,4 +22,21 @@ now , implementing - authentication using NextAuth
 - core/ui
 - shadcn
 - react icons
+-
+
+
+
+
+
+
+
+
+
+
+
+
+
+editable deviceName devise setting page, -->> device setting page, device id copied, 
+
+
 - 

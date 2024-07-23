@@ -11,6 +11,7 @@ import {
   VideoIcon,
   VolumeXIcon,
 } from "lucide-react";
+import HlsPlayer from "./hls-player-component";
 
 function RemoteVideoPlayer({ videoDetail }) {
   return (
@@ -30,19 +31,13 @@ function RemoteVideoPlayer({ videoDetail }) {
         </div>
       </div>
       <div>
-        <ReactPlayer
-          url={videoDetail?.url}
-          
-          width="100%"
-          height="100%"
-          playing={true}
-          muted={true}
-          className="react-player"
-          // config={{
-          //   file: {
-          //     forceHLS: true,
-          //   },
-          // }}
+      <HlsPlayer
+          // srcHd="https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"
+          // srcSd="https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"
+          srcHdLive="https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"
+          srcSdLive="https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"
+          srcHdPlayback="https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"
+          srcSdPlayback="https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"
         />
       </div>
       <div className="flex items-center justify-between mx-10 mt-6 mb-3">

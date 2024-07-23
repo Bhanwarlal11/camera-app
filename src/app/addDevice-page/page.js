@@ -1,8 +1,27 @@
-import { BluetoothSearching, ChevronRight, FileDigit, QrCode, ScanLine, ScanText, Wifi } from "lucide-react";
+'use client'
+import { BluetoothSearching, ChevronRight, CircleHelp, FileDigit, QrCode, ScanLine, ScanText, Wifi } from "lucide-react";
+import {  useRouter } from "next/navigation";
+
+
 
 function AddDevicePage() {
+  const router = useRouter();
+
+  function handleCancel(){
+    console.log("navigte to homw page")
+    router.push('/device-page')
+  }
+
   return (
-    <div className="lg:mx-20 mx-3 mt-4 flex flex-col min-h-screen">
+    <div className="lg:mx-20 mx-3  flex flex-col min-h-screen">
+    <div className="flex flex-row justify-between items-center bg-gray-100 p-2 px-4 rounded-b-3xl ">
+      <p className="cursor-pointer hover:text-gray-500" onClick={handleCancel}>Cancel</p>
+      <div className="flex flex-row gap-1 cursor-pointer hover:text-gray-500">
+      <CircleHelp />
+      <p>Help</p>
+      </div>
+    </div>
+    <div className="bg-white rounded-xl mt-2">
       <div className="flex flex-col ">
         <h3 className="text-gray-700">Add device</h3>
         <p className="text-gray-400">Auto-detecting nearby devices</p>
@@ -93,6 +112,7 @@ function AddDevicePage() {
           </div>
           <ChevronRight className="w-[40px] h-[40px] text-gray-400 " />
         </div>
+      </div>
       </div>
     </div>
   );

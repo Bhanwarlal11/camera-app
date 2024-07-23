@@ -2,7 +2,6 @@
 
 import useWindowSize from "@/app/hooks/useWindowSize";
 import Footer from "../footer";
-import Header from "../Header";
 import Sidebar from "../Sidebar";
 
 function CommonLayout({children}){
@@ -13,14 +12,14 @@ function CommonLayout({children}){
         <div className="flex flex-col min-h-screen">
         
         {/* <Header /> */}
-        {
+        {/* {
           width < 994 ? (
             null
           ) : (
             <Header />
           )
         }
-        
+         */}
         {width < 994 ? (
         <Footer />
       ) : (
