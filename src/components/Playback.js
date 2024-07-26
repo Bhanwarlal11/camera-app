@@ -22,8 +22,8 @@ function Playback({ videoRef }) {
 
       // Cleanup event listeners on component unmount
       return () => {
-        videoRef.current.removeEventListener('loadedmetadata', handleLoadedMetadata);
-        videoRef.current.removeEventListener('timeupdate', handleTimeUpdate);
+        // videoRef.current.removeEventListener('loadedmetadata', handleLoadedMetadata);
+        // videoRef.current.removeEventListener('timeupdate', handleTimeUpdate);
       };
     }
   }, [videoRef]);

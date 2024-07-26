@@ -23,7 +23,7 @@ export function DeviceSettings() {
         <Settings />
       </SheetTrigger>
 
-      <SheetContent className="min-w-full  bg-gray-200 h-full overflow-y-auto ">
+      <SheetContent className="min-w-full md:min-w-72 lg:min-w-96  bg-gray-200 h-full overflow-y-auto ">
         <ScrollArea>
           <h2 className="text-center space-y-3">Settings</h2>
           {/* device Info */}
